@@ -4,6 +4,7 @@ import cn.AssassinG.ScsyERP.common.annitations.Valid;
 import cn.AssassinG.ScsyERP.common.entity.LoginableEntity;
 
 import javax.persistence.Entity;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -21,6 +22,7 @@ public class Manufacturer extends LoginableEntity {
     public Manufacturer(String address) {
         super();
         Address = address;
+        Workshops = new HashSet<>();
     }
 
     public String getAddress() {
@@ -44,7 +46,10 @@ public class Manufacturer extends LoginableEntity {
     }
 
     public void setWorkshops(Set<Long> workshops) {
-        Workshops = workshops;
+        if(workshops == null)
+            Workshops = new HashSet<>();
+        else
+            Workshops = workshops;
     }
 
     @Override
