@@ -17,6 +17,7 @@ public class Manufacturer extends LoginableEntity {
     private Set<Long> Workshops;
 
     public Manufacturer() {
+        Workshops = new HashSet<>();
     }
 
     public Manufacturer(String address) {
