@@ -19,13 +19,13 @@ public interface UserServiceFacade extends BaseService<User> {
     void ChangePhone(Long userId, String Vcode, String newPhone);
     void ChangePhone(User user, String Vcode, String newPhone);
 
+    Role findRoleByRoleName(String rolename);
     Set<Role> findUserRoles(Long userid);
     List<Role> findAllRoles();
-    Role findRoleByRoleName(String rolename);
-    Set<Permission> findUserPermissions(Long userid);
     Set<Permission> findRolePermissions(Long roleid);
     Set<Permission> findFatherRolePermissions(Long roleid);
     List<Permission> findAllPermission();
+    Set<Permission> findUserPermissions(Long userid);
     void addUserRole(Long userid, Long roleid);
     void removeUserRole(Long userid, Long roleid);
     void addRolePermission(Long roleid, Long permissionid);
