@@ -1,4 +1,4 @@
-package cn.AssassinG.ScsyERP.User.facade.exceptions;
+package cn.AssassinG.ScsyERP.User.facade.service;
 
 import cn.AssassinG.ScsyERP.common.exceptions.BizException;
 
