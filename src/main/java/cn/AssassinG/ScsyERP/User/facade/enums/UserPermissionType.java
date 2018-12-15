@@ -5,7 +5,7 @@ import java.util.Map;
 
 public enum UserPermissionType {
 
-    Include("Include", 0), Declude("Declude", 1);
+    Include("额外", 0), Declude("屏蔽", 1);
     private String Name;
     private Integer Value;
 

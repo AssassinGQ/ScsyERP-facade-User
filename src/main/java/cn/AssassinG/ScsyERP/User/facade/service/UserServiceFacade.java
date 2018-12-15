@@ -26,8 +26,10 @@ public interface UserServiceFacade extends BaseService<User> {
     Set<Permission> findRolePermissions(Long roleid);
     Set<Permission> findFatherRolePermissions(Long roleid);
     List<Permission> findAllPermission();
-    boolean addPermissionToRole(Long roleid, Long permissionid);
-    boolean removePermissionFromRole(Long roleid, Long permissionid);
-    boolean addUserRole(Long userid, Long roleid);
-    boolean removeUserRole(Long userid, Long roleid);
+    void addUserRole(Long userid, Long roleid);
+    void removeUserRole(Long userid, Long roleid);
+    void addRolePermission(Long roleid, Long permissionid);
+    void removeRolePermission(Long roleid, Long permissionid);
+    void addUserPermission(Long userId, Long permissionId);
+    void removeUserPermission(Long userId, Long permissionId);
 }
