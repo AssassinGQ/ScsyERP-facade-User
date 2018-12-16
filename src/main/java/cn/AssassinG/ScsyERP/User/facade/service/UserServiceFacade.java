@@ -26,6 +26,6 @@ public interface UserServiceFacade extends BaseService<User> {
     List<User_Permission> findUserPermissions(Long userId);
     void addUserRole(Long userId, Long roleId);
     void removeUserRole(Long userId, Long roleId);
-    void addUserPermission(Long userId, Long permissionId);
-    void removeUserPermission(Long userId, Long permissionId);
+    void addUserPermission(Long userId, Long permissionId, Integer type);
+    void removeUserPermission(Long userId, Long permissionId, Integer type);
 }
