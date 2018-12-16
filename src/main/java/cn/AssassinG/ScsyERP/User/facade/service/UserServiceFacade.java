@@ -5,11 +5,13 @@ import cn.AssassinG.ScsyERP.User.facade.entity.Role;
 import cn.AssassinG.ScsyERP.User.facade.entity.User;
 import cn.AssassinG.ScsyERP.common.core.service.BaseService;
 
+import java.util.List;
 import java.util.Set;
 
 public interface UserServiceFacade extends BaseService<User> {
     User findUserByUname(String username);
     User findUserByPhone(String phone);
+    List<User> findAllUser();
     String getVcode(String phone);
     boolean login(String userName, String password);
     void ChangePSW(String phone, String vcode, String newPassWord);
