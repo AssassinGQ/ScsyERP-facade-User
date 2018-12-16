@@ -3,6 +3,7 @@ package cn.AssassinG.ScsyERP.User.facade.service;
 import cn.AssassinG.ScsyERP.User.facade.entity.Permission;
 import cn.AssassinG.ScsyERP.User.facade.entity.Role;
 import cn.AssassinG.ScsyERP.User.facade.entity.User;
+import cn.AssassinG.ScsyERP.User.facade.entity.User_Permission;
 import cn.AssassinG.ScsyERP.common.core.service.BaseService;
 
 import java.util.List;
@@ -21,7 +22,8 @@ public interface UserServiceFacade extends BaseService<User> {
     void ChangePhone(User user, String Vcode, String newPhone);
 
     Set<Role> findUserRoles(Long userId);
-    Set<Permission> findUserPermissions(Long userId);
+    Set<Permission> findUserFinalPermissions(Long userId);
+    List<User_Permission> findUserPermissions(Long userId);
     void addUserRole(Long userId, Long roleId);
     void removeUserRole(Long userId, Long roleId);
     void addUserPermission(Long userId, Long permissionId);
