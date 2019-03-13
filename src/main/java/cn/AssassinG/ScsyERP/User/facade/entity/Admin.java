@@ -49,7 +49,9 @@ public class Admin extends LoginableEntity {
     public String toString() {
         return "Admin{" +
                 "Dept=" + Dept +
+                ", Name='" + Name + '\'' +
                 ", Id=" + Id +
+                ", Corporation=" + Corporation +
                 ", CreateTime=" + CreateTime +
                 ", UpdateTime=" + UpdateTime +
                 ", DeleteTime=" + DeleteTime +
