@@ -21,6 +21,7 @@ public class Government extends LoginableEntity {
     public Government(GovernmentDeptType dept) {
         super();
         Dept = dept;
+        super.Corporation = -1L;
     }
 
     @JSONField(serialize = false)
